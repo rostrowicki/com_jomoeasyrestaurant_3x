@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="leftcol">
+        <field
+            name="id"
+            type="hidden"
+            label="JGLOBAL_FIELD_ID_LABEL"
+            description="JBLOBAL_FIELD_ID_DESC"
+            size="10"
+            default="0"
+            readonly="true"
+            class="readonly"
+        />
+        <field
+            name="name"
+            type="text"
+            label="MENU_NAME_LABEL"
+            description="MENU_NAME_DESCRIPTION"
+            size="40"
+            class="inputbox"
+            required="true"
+        />
+        <field 
+            name="image_url" 
+            type="media"
+            hide_none="1" 
+            label="COM_BANNERS_FIELD_IMAGE_LABEL"
+            size="40"
+            description="COM_BANNERS_FIELD_IMAGE_DESC" 
+        />
+        <field
+            name="description"
+            type="textarea"
+            label="MENU_DESC_LABEL"
+            description="MENU_DESC_DESCRIPTION"
+            size="40"
+            filter="nohtml"
+            class="inputbox"
+            required="true"
+        />      
+    </fieldset>
+    <fieldset name="rightcol">  
+        <field
+            name="published"
+            type="list"
+            label="JSTATUS"
+            descritpion="JFIELD_PUBLISHED_DESC"
+            class="inputbox"
+            filter="intval"
+            size="1"
+            default="1"
+        >
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+        </field>
+    </fieldset>
+</form>

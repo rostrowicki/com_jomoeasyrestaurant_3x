@@ -1,0 +1,70 @@
+<?php
+/*------------------------------------------------------------------------
+# com_jomoeasyrestaurantmenu - JOMO Easy Restaurant Menu Extension for Joomla 2.5
+# -----------------------------------------------------------------------
+# author: http://www.jomotheme.com
+# copyright Copyright (C) 2013 jomotheme.com. All Rights Reserved.
+# @license - http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+# Website: http://www.jomotheme.com
+# Technical Support: Visit Forum on http://www.jomotheme.com
+*/
+
+// No direct access to this file
+defined('_JEXEC') or die('Restricted access');
+
+// import Joomla modelform library
+jimport('joomla.application.component.modeladmin');
+
+/**
+ * Jomoeasyrestaurantmenu Model
+ */
+class jomoeasyrestaurantmenuModelJomoeasyrestaurantmenu extends JModelAdmin {
+
+    /**
+     * Returns a reference to the a Table object, always creating it.
+     *
+     * @param       type    The table type to instantiate
+     * @param       string  A prefix for the table class name. Optional.
+     * @param       array   Configuration array for model. Optional.
+     * @return      JTable  A database object
+     * @since       2.5
+     */
+    public function getTable($type = 'Jomoeasyrestaurantmenu', $prefix = 'Jomoeasyrestaurantmenu', $config = array()) {
+        return JTable::getInstance($type, $prefix, $config);
+    }
+
+    /**
+     * Method to get the record form.
+     *
+     * @param       array   $data           Data for the form.
+     * @param       boolean $loadData       True if the form is to load its own data (default case), false if not.
+     * @return      mixed   A JForm object on success, false on failure
+     * @since       2.5
+     */
+    public function getForm($data = array(), $loadData = true) {
+        // Get the form.       
+        echo('trying to get form');
+        $form = $this->loadForm('com_jomoeasyrestaurantmenu.jomoeasyrestaurantmenu', 'jomoeasyrestaurantmenu', array('control' => 'jform', 'load_data' => $loadData));
+        die('form is loaded');
+        if (empty($form)) {
+            return false;
+        }
+        return $form;
+    }
+
+    /**
+     * Method to get the data that should be injected in the form.
+     *
+     * @return      mixed   The data for the form.
+     * @since       2.5
+     */
+    protected function loadFormData() {
+        // Check the session for previously entered form data.
+        $data = JFactory::getApplication()->getUserState('com_jomoeasyrestaurantmenu.edit.item.data', array());
+        if (empty($data)) {
+            $data = $this->getItem();
+        }
+        return $data;
+    }
+
+}

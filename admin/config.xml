@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <fieldset
+        name="general"
+        label="COM_JOMOEASYRESTAURANTMENU_OPTIONS"
+        description="COM_JOMOEASYRESTAURANTMENU_OPTIONS_DESC">
+        
+        <field 
+            name="currency" 
+            type="text"
+            maxlength="4"
+            label="COM_JOMOEASYRESTAURANTMENU_CURRENCY_SYMBOL_LABEL"
+            descritpion = "COM_JOMOEASYRESTAURANTMENU_CURRENCY_SYMBOL_DESC" 
+            default=""
+            filter="nohtml"
+        />
+        
+        <field
+            name="currSymbolPos"
+            type="radio"
+            default="0"
+            label="COM_JOMOEASYRESTAURANTMENU_CURRENCY_SYMBOL_POS_LABEL"
+            description="COM_JOMOEASYRESTAURANTMENU_CURRENCY_SYMBOL_POS_DESC">
+            <option value="0">AFTER</option>
+            <option value="1">BEFORE</option>
+        </field>
+                
+        <field type="spacer" name="myspacer" hr="true"/>
+        
+        <field
+            name="font_set"
+            type="list"
+            default=""
+            label="COM_JOMOEASYRESTAURANTMENU_SELECT_FONTSET_LABEL"
+            description="COM_JOMOEASYRESTAURANTMENU_SELECT_FONTSET_DESC">
+            <option value="-1">COM_JOMOEASYRESTAURANTMENU_FONT_KEEP</option>
+            <option value="00">COM_JOMOEASYRESTAURANTMENU_FONT00</option>                            
+            <option value="01">COM_JOMOEASYRESTAURANTMENU_FONT01</option>                            
+            <option value="02">COM_JOMOEASYRESTAURANTMENU_FONT02</option>                            
+            <option value="03">COM_JOMOEASYRESTAURANTMENU_FONT03</option>                            
+            <option value="04">COM_JOMOEASYRESTAURANTMENU_FONT04</option>                            
+            <option value="05">COM_JOMOEASYRESTAURANTMENU_FONT05</option>                            
+            <option value="06">COM_JOMOEASYRESTAURANTMENU_FONT06</option>                            
+            <option value="07">COM_JOMOEASYRESTAURANTMENU_FONT07</option>                            
+            <option value="08">COM_JOMOEASYRESTAURANTMENU_FONT08</option>                            
+            <option value="09">COM_JOMOEASYRESTAURANTMENU_FONT09</option>                            
+            <option value="10">COM_JOMOEASYRESTAURANTMENU_FONT10</option>                                        
+        </field>                
+
+        <field type="spacer" name="myspacer2" hr="true"/>
+                        
+        <field
+            name="enableLinks"
+            type="radio"
+            default="0"
+            label="Using gallery links"
+            description="Enable images as links. Allows to use gallery plugins based on REL attribute or ROKBOX2.">
+            <option value="0">JNO</option>
+            <option value="1">REL</option>
+            <option value="2">ROKBOX2</option>
+        </field>       
+        
+        <field
+            name="attrName"
+            type="text"
+            defautl="lightbox"
+            label="REL attribute name"
+            description="Rel attribute name">
+        </field>
+        
+    </fieldset>
+</config>
