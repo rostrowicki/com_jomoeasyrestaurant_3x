@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5.0" method="upgrade">
+
+ 
+    <name>Jomo Easy Restaurant Menu</name>
+    
+    <creationDate>June 2013</creationDate>
+    <author>Robert Ostrowicki, JoMoTheme.com</author>
+    <authorEmail>info(at)fromsoft.pl</authorEmail>
+    <authorUrl>http://jomotheme.com</authorUrl>
+    <copyright>JomoTheme.com (c) 2013</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <!--  The version string is recorded in the components table -->
+    <version>1.0.1</version>
+    <!-- The description is optional and defaults to the name -->
+    <description><![CDATA[JoMo Easy Restaurant Menu will keep your restaurant menu and prepare it for proffesional display.]]>
+    </description>
+ 
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+    <update> <!-- Runs on update; New in 2.5 -->
+        <schemas>
+            <schemapath type="mysql">sql/updates</schemapath>
+        </schemas>
+    </update>
+ 
+    <files folder="site">
+        <filename>index.html</filename>
+        <filename>jomoeasyrestaurantmenu.php</filename>
+        <filename>controller.php</filename>
+        <folder>views</folder>
+        <folder>models</folder>
+    </files>
+    <languages folder="site/language">
+        <language tag="pl-PL">pl-PL/pl-PL.com_jomoeasyrestaurantmenu.ini</language>
+        <language tag="en-GB">en-GB/en-GB.com_jomoeasyrestaurantmenu.ini</language>
+        <language tag="de-DE">de-DE/de-DE.com_jomoeasyrestaurantmenu.ini</language>
+    </languages>
+    
+    <media folder="media" destination="com_jomoeasyrestaurantmenu"> 
+        <folder>css</folder>
+        <folder>image</folder>
+        <folder>icons</folder>
+        <folder>dishes</folder>
+        <filename>index.html</filename>
+    </media>
+        
+        
+    <administration>
+        <!-- Administration Menu Section -->
+        <menu img="../media/com_jomoeasyrestaurantmenu/image/icon-16-jomoeasyrestaurantmenu.png">COM_JOMOEASYRESTAURANTMENU_MANAGER</menu>
+        <submenu>
+            <!--
+                    Note that all & must be escaped to &amp; for the file to be valid
+                    XML and be parsed by the installer
+            -->
+            <menu link="option=com_jomoeasyrestaurantmenu&amp;view=menus" view="menus" img="../media/com_jomoeasyrestaurantmenu/image/icon-16-jomoeasyrestaurantmenu.png"
+                  alt="JoMo Easy Restaurant Menu/Menus">COM_JOMOEASYRESTAURANTMENU_MENUS</menu>
+            <menu link="option=com_jomoeasyrestaurantmenu&amp;view=categories" view="categories" img="../media/com_jomoeasyrestaurantmenu/image/icon-16-jomoeasyrestaurantmenu.png"
+                  alt="JoMo Easy Restaurant Menu/Categories">COM_JOMOEASYRESTAURANTMENU_CATEGORIES</menu>
+            <menu link="option=com_jomoeasyrestaurantmenu&amp;view=dishes" view="dishes" img="../media/com_jomoeasyrestaurantmenu/image/icon-16-jomoeasyrestaurantmenu.png"
+                  alt="JoMo Easy Restaurant Menu/Dishes">COM_JOMOEASYRESTAURANTMENU_DISHES</menu>
+        </submenu>
+
+        <files folder="admin">
+            <!-- Admin Main File Copy Section -->
+            <filename>index.html</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>jomoeasyrestaurantmenu.php</filename>
+                
+            <folder>controllers</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>views</folder>
+            <folder>tables</folder>
+            <folder>sql</folder>
+        </files>
+
+
+
+        <languages folder="admin/language">     
+            <language tag="pl-PL">pl-PL/pl-PL.com_jomoeasyrestaurantmenu.ini</language>
+            <language tag="pl-PL">pl-PL/pl-PL.com_jomoeasyrestaurantmenu.sys.ini</language>               
+            <language tag="en-GB">en-GB/en-GB.com_jomoeasyrestaurantmenu.ini</language>
+            <language tag="en-GB">en-GB/en-GB.com_jomoeasyrestaurantmenu.sys.ini</language>            
+            <language tag="de-DE">de-DE/de-DE.com_jomoeasyrestaurantmenu.ini</language>
+            <language tag="de-DE">de-DE/de-DE.com_jomoeasyrestaurantmenu.sys.ini</language> 
+        </languages>
+        
+        
+        
+    </administration>
+
+
+
+</extension>
