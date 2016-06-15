@@ -1,0 +1,121 @@
+/* 
+    Document   : css
+    Created on : 2013-05-19, 12:30:25
+    Author     : robertostrowicki
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+
+root { 
+    display: block;
+}
+
+
+
+.jomoerm
+{
+    text-align:justify;
+}
+
+/* menu title */
+.jomoerm h1
+{
+    border-bottom: 3px double #ebebeb;    
+}
+
+/* menu subtitle */
+.jomoerm h4
+{    
+    padding: 15px 0 5px 0;
+    margin: 0 0 5px 0;    
+}
+
+
+/* category name */
+.jomoerm h3
+{    
+    border-bottom: 3px double #ebebeb;
+    padding: 10px 0 5px 0;
+    margin: 0 0 20px 0; 
+    clear:both;
+}
+
+.jomoerm_description
+{    
+    margin-bottom: 10px;
+    padding: 0 0 0 5px;
+    border: none;
+    clear:both;
+}
+
+/* dish name */
+.jomoerm h5
+{    
+    border-bottom: 3px double #ebebeb;
+    padding: 30px 0 5px 0;
+    margin: 0 0 20px 0; 
+}
+
+
+.jomoerm_menuthumb
+{
+    max-width: 100px;   
+    padding: 0 0 0 10px;
+    float: left;
+    margin: 5px 10px 5px 0;
+}
+
+.jomoerm_price
+{
+    float: right;    
+    min-width: 16px;
+    min-height: 16px;
+    padding-top: 0;
+    padding-right: 10px;
+}
+
+
+.jomoerm_dishes p {
+    line-height: 140%;
+}
+
+.jomoerm_dishes {
+    clear:both;
+}
+
+/* dish name */
+.jomoerm_dishes h5
+{
+    float: none;
+    display:inline;
+    margin: 0 0 0 0;
+    padding: 0;
+}
+
+.jomoerm_onecol
+{
+    margin: 0 0 10px 0;
+    padding: 0;
+    width:98%;
+}
+
+.jomoerm_onecol ul
+{
+    list-style: none;    
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.jomoerm_twocol li
+{
+    width: 48%;
+    margin: 0 0 1% 1%;     
+    padding-left: 1%;
+    float: left;   
+}
+
+.jomoerm_twocol p {
+    margin-left: 2%;
+}

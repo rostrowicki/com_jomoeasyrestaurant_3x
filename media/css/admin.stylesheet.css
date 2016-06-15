@@ -1,0 +1,15 @@
+/* 
+    Document   : admin.stylesheet.css
+    Created on : 2013-06-02, 16:10:29
+    Author     : robertostrowicki
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+.icon-48-jomo {
+  background: url('../image/icon-48-jomoeasyrestaurantmenu.png') 0 0 no-repeat;
+}

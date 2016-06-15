@@ -1,0 +1,83 @@
+/* 
+    Document   : css
+    Created on : 2013-06-02, 12:30:25
+    Author     : robertostrowicki
+    Description:
+        Arvo&PTSans
+        Purpose of the stylesheet follows.
+*/
+
+@import url("http://fonts.googleapis.com/css?family=Arvo");
+@import url("http://fonts.googleapis.com/css?family=PT+Sans");
+
+root { 
+    display: block;    
+}
+
+
+
+.jomoerm
+{
+    font: 15px/20px 'PT Sans', Helvetica, Arial, sans-serif;
+    color: #444;
+}
+
+/* menu title */
+.jomoerm h1
+{
+    font-size: 40px;
+    line-height: 44px;
+    letter-spacing: -0.5px;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+    font-family: 'Arvo', Georgia, Times, serif;
+
+}
+
+/* menu subtitle */
+.jomoerm h4
+{    
+    text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+    font-size: 26px;
+    line-height: 36px;
+    font-family: 'Arvo', Georgia, Times, serif;
+}
+
+
+/* category name */
+.jomoerm h3
+{
+    text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+    font-size: 26px;
+    line-height: 32px;   
+    font-family: 'Arvo', Georgia, Times, serif;
+}
+
+.jomoerm_description
+{
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: normal;
+    text-transform: none;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.6)!important;
+    letter-spacing: normal;      
+    font-style:italic;
+}
+
+/* dish name */
+.jomoerm h5
+{
+    text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+    font-size: 20px;
+    line-height: 32px;
+    font-family: 'Arvo', Georgia, Times, serif;
+}
+
+.jomoerm_price
+{
+    font-style: italic;
+}
+
+
+.jomoerm_dishes p {
+    line-height: 140%;
+}
